@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 3056629}
   - component: {fileID: 3056631}
   - component: {fileID: 3056630}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PipeD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -255,7 +255,7 @@ GameObject:
   - component: {fileID: 53158760}
   - component: {fileID: 53158762}
   - component: {fileID: 53158761}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BlocksD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -380,7 +380,7 @@ GameObject:
   - component: {fileID: 110678910}
   - component: {fileID: 110678912}
   - component: {fileID: 110678911}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PipeB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -505,7 +505,7 @@ GameObject:
   - component: {fileID: 120618476}
   - component: {fileID: 120618478}
   - component: {fileID: 120618477}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Edge (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -600,7 +600,7 @@ GameObject:
   - component: {fileID: 276236719}
   - component: {fileID: 276236721}
   - component: {fileID: 276236720}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BlocksA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -725,7 +725,7 @@ GameObject:
   - component: {fileID: 282456749}
   - component: {fileID: 282456751}
   - component: {fileID: 282456750}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Edge (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -820,7 +820,7 @@ GameObject:
   - component: {fileID: 386122415}
   - component: {fileID: 386122417}
   - component: {fileID: 386122416}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Edge (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -915,7 +915,7 @@ GameObject:
   - component: {fileID: 502256878}
   - component: {fileID: 502256880}
   - component: {fileID: 502256879}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PipeE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1239,13 +1239,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1542668eebb621459d41724c902b49e, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f117e38890875f40aac270ead014fb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::cameraFollow
   currentState: 0
   minXPos: -150
   maxXPos: 150
   target: {fileID: 1640416073}
+  cameraSpeed: 5
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1365,7 +1366,7 @@ GameObject:
   - component: {fileID: 685686265}
   - component: {fileID: 685686267}
   - component: {fileID: 685686266}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PlatformC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1490,7 +1491,7 @@ GameObject:
   - component: {fileID: 785047115}
   - component: {fileID: 785047117}
   - component: {fileID: 785047116}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: GroundB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1615,7 +1616,7 @@ GameObject:
   - component: {fileID: 825116851}
   - component: {fileID: 825116853}
   - component: {fileID: 825116852}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PlatformB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1740,7 +1741,7 @@ GameObject:
   - component: {fileID: 876551244}
   - component: {fileID: 876551246}
   - component: {fileID: 876551245}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: CloudsB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1835,7 +1836,7 @@ GameObject:
   - component: {fileID: 944746292}
   - component: {fileID: 944746294}
   - component: {fileID: 944746293}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BlocksB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1960,7 +1961,7 @@ GameObject:
   - component: {fileID: 958340537}
   - component: {fileID: 958340536}
   - component: {fileID: 958340535}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Edge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2055,7 +2056,7 @@ GameObject:
   - component: {fileID: 1073975401}
   - component: {fileID: 1073975403}
   - component: {fileID: 1073975402}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PipeF
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2180,7 +2181,7 @@ GameObject:
   - component: {fileID: 1077166962}
   - component: {fileID: 1077166964}
   - component: {fileID: 1077166963}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Edge (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2275,7 +2276,7 @@ GameObject:
   - component: {fileID: 1090291287}
   - component: {fileID: 1090291289}
   - component: {fileID: 1090291288}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: CloudsD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2370,7 +2371,7 @@ GameObject:
   - component: {fileID: 1174928189}
   - component: {fileID: 1174928191}
   - component: {fileID: 1174928190}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Edge (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2465,7 +2466,7 @@ GameObject:
   - component: {fileID: 1186470051}
   - component: {fileID: 1186470053}
   - component: {fileID: 1186470052}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Edge (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2560,7 +2561,7 @@ GameObject:
   - component: {fileID: 1239628374}
   - component: {fileID: 1239628376}
   - component: {fileID: 1239628375}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: CloudsC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2655,7 +2656,7 @@ GameObject:
   - component: {fileID: 1268903313}
   - component: {fileID: 1268903315}
   - component: {fileID: 1268903314}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Edge (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2750,7 +2751,7 @@ GameObject:
   - component: {fileID: 1301856480}
   - component: {fileID: 1301856482}
   - component: {fileID: 1301856481}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: CloudsA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2845,7 +2846,8 @@ GameObject:
   - component: {fileID: 1387541796}
   - component: {fileID: 1387541797}
   - component: {fileID: 1387541798}
-  m_Layer: 0
+  - component: {fileID: 1387541799}
+  m_Layer: 3
   m_Name: GroundA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2959,6 +2961,28 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!95 &1387541799
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1387541795}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ace4e7b275933784cb44b907b48febe2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1387923635
 GameObject:
   m_ObjectHideFlags: 0
@@ -2970,7 +2994,7 @@ GameObject:
   - component: {fileID: 1387923636}
   - component: {fileID: 1387923638}
   - component: {fileID: 1387923637}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: GroundC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3187,7 +3211,7 @@ GameObject:
   - component: {fileID: 1514440846}
   - component: {fileID: 1514440848}
   - component: {fileID: 1514440847}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PipeC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3312,7 +3336,7 @@ GameObject:
   - component: {fileID: 1518488705}
   - component: {fileID: 1518488707}
   - component: {fileID: 1518488706}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BlocksC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3437,7 +3461,7 @@ GameObject:
   - component: {fileID: 1536743581}
   - component: {fileID: 1536743583}
   - component: {fileID: 1536743582}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PlatformD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3562,7 +3586,7 @@ GameObject:
   - component: {fileID: 1541278265}
   - component: {fileID: 1541278267}
   - component: {fileID: 1541278266}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: GroundE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3694,6 +3718,9 @@ GameObject:
   - component: {fileID: 1640416074}
   - component: {fileID: 1640416075}
   - component: {fileID: 1640416076}
+  - component: {fileID: 1640416078}
+  - component: {fileID: 1640416077}
+  - component: {fileID: 1640416079}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -3859,11 +3886,85 @@ MonoBehaviour:
   m_GameObject: {fileID: 1640416071}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c839f5fca123b8a47ab56c8e77d7b178, type: 3}
+  m_Script: {fileID: 11500000, guid: aadc7e3329a75734480e5b85c816c99d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GroundCheck
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  groundCheckRadius: 0.2
+--- !u!114 &1640416077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1640416071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 589ed0ff6d35ff948aca6a5110212632, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   moveSpeed: 5
   jumpForce: 10
+  maxJumps: 2
+--- !u!95 &1640416078
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1640416071}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 95a673e5c490c7348b630bfc01fe2a80, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1640416079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1640416071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73ab79a276b522941b9fee5c4e7bedaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Shoot
+  initShotVelocity: {x: 5, y: 5}
+  spawnPointLeft: {fileID: 1640416073}
+  spawnPointRight: {fileID: 1640416073}
+  projectilePrefab: {fileID: 1667022875}
+--- !u!1 &1667022871 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7088811391939470117, guid: 37a61a06c9c4c7649bddd531880813c4, type: 3}
+  m_PrefabInstance: {fileID: 2667078271272464670}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1667022875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1667022871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51c8d4b7ecd3e7c4e92a36ccb9caf368, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Projectile
+  lifetime: 5
+  initVelocity: {x: 5, y: 5}
 --- !u!1 &1697851391
 GameObject:
   m_ObjectHideFlags: 0
@@ -3875,7 +3976,7 @@ GameObject:
   - component: {fileID: 1697851392}
   - component: {fileID: 1697851394}
   - component: {fileID: 1697851393}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PipeA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4000,7 +4101,7 @@ GameObject:
   - component: {fileID: 1846148046}
   - component: {fileID: 1846148048}
   - component: {fileID: 1846148047}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PlatformA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4125,7 +4226,7 @@ GameObject:
   - component: {fileID: 1914620971}
   - component: {fileID: 1914620973}
   - component: {fileID: 1914620972}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Edge (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4220,7 +4321,7 @@ GameObject:
   - component: {fileID: 2057847092}
   - component: {fileID: 2057847094}
   - component: {fileID: 2057847093}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: GroundD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4386,10 +4487,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerProjectile
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5133002826051401764, guid: 37a61a06c9c4c7649bddd531880813c4, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7088811391939470117, guid: 37a61a06c9c4c7649bddd531880813c4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1667022875}
   m_SourcePrefab: {fileID: 100100000, guid: 37a61a06c9c4c7649bddd531880813c4, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
