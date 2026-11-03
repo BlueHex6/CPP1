@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(SpriteRenderer), typeof(BoxCollider2D))]
@@ -8,7 +9,79 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed = 5f;
     public float jumpForce = 5f;
     public int maxJumps = 2;
+    public float initialPowerUpDuration = 5.0f;
     #endregion
+
+    #region Getters and Setters
+
+    [SerializeField] private int maxLives = 9;
+    private int _lives = 3; //internal lives value
+    public int lives
+    {
+        get { return _lives; }
+        set
+        {
+            if (value >= maxLives)
+            {
+                _lives = maxLives;
+            }
+            else if (value < 0)
+            {
+                _lives = 0;
+                //go to game over
+                Debug.Log("Game Over");
+            }
+            else if (_lives > value)
+            {
+                _lives = value;
+                //respawn goes here
+                Debug.Log("Respawn");
+            }
+            else
+            {
+                _lives = value;
+            }
+
+            Debug.Log($"Lives were changed to {_lives}");
+        }
+    } //finalized life gating
+
+    private int _score = 3;
+    public int score
+    {
+        get => _score;
+        set
+        {
+            _score = value;
+        }
+
+    }
+
+    #endregion
+
+    //C++ style getter/setter
+    //public void SetLives(int lifeValue)
+    //{
+    //    if (lifeValue > maxLives)
+    //    {
+    //        lives = maxLives;
+    //    }
+    //    else if (liveValue < 0)
+    //    {
+    //        lives = 0;
+    //        //gameover would go here
+    //    }
+    //    else if (lives > lifeValue)
+    //    {
+    //        lives = lifeValue;
+    //        //we lost a life - respawn....
+    //    }
+    //}
+
+    //public int GetLives()
+    //{
+    //    return lives;
+    //}
 
     #region Component References
     private Rigidbody2D rb;
@@ -20,6 +93,9 @@ public class PlayerController : MonoBehaviour
 
     #region Properties
     private int currentJumps = 0;
+    private float currentPowerupDuration = 0;
+    private float initialJumpForce;
+    private Coroutine jumpForceCoroutine = null;
     #endregion
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -34,6 +110,7 @@ public class PlayerController : MonoBehaviour
         gndChk.Init(bc, rb);
 
         rb.sleepMode = RigidbodySleepMode2D.NeverSleep;
+        initialJumpForce = jumpForce;
     }
 
     // Update is called once per frame
@@ -81,4 +158,32 @@ public class PlayerController : MonoBehaviour
     //        sr.flipX = !sr.flipX;
     //    }
     //}
+
+    public void JumpForceChange()
+    {
+        if (jumpForceCoroutine != null)
+        {
+            StopCoroutine(jumpForceCoroutine);
+            jumpForceCoroutine = null;
+            jumpForce = initialJumpForce;
+        }
+        jumpForceCoroutine = StartCoroutine(JumpForceChangeCoroutine());
+    }
+
+    IEnumerator JumpForceChangeCoroutine()
+    {
+        currentPowerupDuration = initialPowerUpDuration + currentPowerupDuration;
+        jumpForce = 15;
+
+        while(currentPowerupDuration > 0)
+        {
+            currentPowerupDuration -= Time.deltaTime;
+            Debug.Log($"Jump Powerup time remaining {currentPowerupDuration}");
+            yield return null;
+        }
+
+        jumpForce = initialJumpForce;
+        jumpForceCoroutine = null;
+        currentPowerupDuration = 0f;
+    }
 }

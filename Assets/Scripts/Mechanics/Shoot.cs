@@ -1,3 +1,4 @@
+using NUnit.Framework.Constraints;
 using UnityEngine;
 
 public class Shoot : MonoBehaviour
@@ -5,6 +6,7 @@ public class Shoot : MonoBehaviour
     private SpriteRenderer sr;
 
     [SerializeField] private Vector2 initShotVelocity = new Vector2(5, 5);
+    private Vector2 initShotVelocityFlipped = new Vector2(-5, 5);
     [SerializeField] private Transform spawnPointLeft;
     [SerializeField] private Transform spawnPointRight;
     [SerializeField] private Projectile projectilePrefab;
@@ -45,7 +47,8 @@ public class Shoot : MonoBehaviour
         else
         {
             curProjectile = Instantiate(projectilePrefab, spawnPointLeft.position, Quaternion.identity);
-            curProjectile.SetVelocity(initShotVelocity);
+            initShotVelocityFlipped = new Vector2(-initShotVelocity.x, initShotVelocity.y);
+            curProjectile.SetVelocity(initShotVelocityFlipped);
         }    
     }
 }

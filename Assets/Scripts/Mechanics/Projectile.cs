@@ -32,6 +32,7 @@ public class Projectile : MonoBehaviour
     {
         if (collision.gameObject.layer == 3) {
             Debug.Log("Projectile hit the ground");
+            Destroy(gameObject);
         }
     }
 
