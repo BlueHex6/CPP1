@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 2241567276661089331}
   - component: {fileID: 3973232431003786834}
   - component: {fileID: 1044621266829977537}
-  - component: {fileID: 5133002826051401764}
+  - component: {fileID: 2616386433989017139}
+  - component: {fileID: -3623381834377930962}
   m_Layer: 0
   m_Name: PlayerProjectile
   m_TagString: Untagged
@@ -117,11 +118,11 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &5133002826051401764
+--- !u!114 &2616386433989017139
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -130,8 +131,44 @@ MonoBehaviour:
   m_GameObject: {fileID: 7088811391939470117}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2aa6c6559b1fe94cbf86f8a6d2c730d, type: 3}
+  m_Script: {fileID: 11500000, guid: 51c8d4b7ecd3e7c4e92a36ccb9caf368, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Projectile
   lifetime: 5
-  initVelocity: {x: 1, y: 5}
+  initVelocity: {x: 0, y: 0}
+--- !u!58 &-3623381834377930962
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7088811391939470117}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 0.25
