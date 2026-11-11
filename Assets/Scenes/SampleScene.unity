@@ -1430,7 +1430,7 @@ MonoBehaviour:
   minXPos: -149
   maxXPos: 149
   target: {fileID: 1640416073}
-  cameraSpeed: 5
+  cameraSpeed: 10
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -4145,12 +4145,12 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 100
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 4638078165498462608, guid: bd64739a0da8e2747829b0527366e901, type: 3}
+  m_Sprite: {fileID: -2045136515, guid: bd64739a0da8e2747829b0527366e901, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.15, y: 0.28}
+  m_Size: {x: 2, y: 3.6875}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -4239,8 +4239,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
-    oldSize: {x: 0.9375, y: 1.75}
-    newSize: {x: 0.15, y: 0.28}
+    oldSize: {x: 1, y: 1.84375}
+    newSize: {x: 2, y: 3.6875}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -4275,8 +4275,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 589ed0ff6d35ff948aca6a5110212632, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
-  moveSpeed: 5
-  jumpForce: 10
+  moveSpeed: 10
+  jumpForce: 7
   maxJumps: 2
   initialPowerUpDuration: 5
   maxLives: 9
@@ -4290,7 +4290,7 @@ Animator:
   m_GameObject: {fileID: 1640416071}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 95a673e5c490c7348b630bfc01fe2a80, type: 2}
+  m_Controller: {fileID: 9100000, guid: 5e72e4c3c5f4a3b4ebdaec11b22cb62d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -4978,7 +4978,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2241567276661089331, guid: 37a61a06c9c4c7649bddd531880813c4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.873
+      value: 1.27
       objectReference: {fileID: 0}
     - target: {fileID: 2241567276661089331, guid: 37a61a06c9c4c7649bddd531880813c4, type: 3}
       propertyPath: m_LocalPosition.z
