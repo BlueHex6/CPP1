@@ -1,4 +1,5 @@
 using NUnit.Framework.Constraints;
+using System;
 using UnityEngine;
 
 public class Shoot : MonoBehaviour
@@ -11,6 +12,10 @@ public class Shoot : MonoBehaviour
     [SerializeField] private Transform spawnPointRight;
     [SerializeField] private Projectile projectilePrefab;
 
+    private Vector2 leftShotVelocity;
+    public Action<Vector2> OnShotFired;
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -19,6 +24,7 @@ public class Shoot : MonoBehaviour
         if (initShotVelocity == Vector2.zero)
         {
             initShotVelocity = new Vector2(5, 5);
+            initShotVelocityFlipped = new Vector2(-initShotVelocity.x, initShotVelocity.y);
             Debug.LogWarning("Shoot: InitShotVelocity not defined - setting to a default 5, 5");
         }
 
@@ -43,12 +49,14 @@ public class Shoot : MonoBehaviour
         {
             curProjectile = Instantiate(projectilePrefab, spawnPointRight.position, Quaternion.identity);
             curProjectile.SetVelocity(initShotVelocity);
+            OnShotFired?.Invoke(initShotVelocity); //Notify subscribers that a shot has been fired
         }
         else
         {
             curProjectile = Instantiate(projectilePrefab, spawnPointLeft.position, Quaternion.identity);
             initShotVelocityFlipped = new Vector2(-initShotVelocity.x, initShotVelocity.y);
             curProjectile.SetVelocity(initShotVelocityFlipped);
+            OnShotFired?.Invoke(initShotVelocityFlipped);
         }    
     }
 }

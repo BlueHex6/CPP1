@@ -98,6 +98,8 @@ public class PlayerController : MonoBehaviour
     private Coroutine jumpForceCoroutine = null;
     #endregion
 
+    Shoot shoot;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -155,7 +157,7 @@ public class PlayerController : MonoBehaviour
     //{
     //    if (sr.flipX && moveX > 0f || !sr.flipX && moveX< 0f)
     //    {
-    //        sr.flipX = !sr.flipX;
+    //        sr.flipX = ! X;
     //    }
     //}
 
