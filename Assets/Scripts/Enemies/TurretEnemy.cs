@@ -5,6 +5,7 @@ using UnityEngine;
 public class TurretEnemy : BaseEnemy
 {
     [SerializeField] private float fireRate = 1.0f; // Time in seconds between shots
+    [SerializeField] private int range = 5;
     private float timeSinceLastShot = 0.0f;
 
     private Shoot shoot;
@@ -37,7 +38,20 @@ public class TurretEnemy : BaseEnemy
             timeSinceLastShot += Time.deltaTime;
             if (timeSinceLastShot >= fireRate)
             {
-                anim.SetTrigger("attack");
+                if (sr.flipX)
+                {
+                    if (currentPos.x - range < player.transform.position.x)
+                    {
+                        anim.SetTrigger("attack");
+                    }
+                }
+                else
+                {
+                    if (player.transform.position.x - range < currentPos.x)
+                    {
+                        anim.SetTrigger("attack");
+                    }
+                }
             }
         }
         if(player.transform.position.x < currentPos.x)
