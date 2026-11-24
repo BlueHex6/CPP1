@@ -11,5 +11,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: be880744105b9874bb611f146ed4e3ce
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: 671154501454b9d43949b82ea16e2d83
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

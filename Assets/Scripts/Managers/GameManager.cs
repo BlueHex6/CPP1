@@ -114,6 +114,7 @@ public class GameManager : MonoBehaviour
     private void GameOver()
     {
         Debug.Log("Game Over Triggered");
+        SceneManager.LoadScene("GameOver");
         //game over scene switching logic can happen here
     }
 
