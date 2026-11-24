@@ -14,48 +14,7 @@ public class PlayerController : MonoBehaviour
 
     #region Getters and Setters
 
-    [SerializeField] private int maxLives = 9;
-    private int _lives = 3; //internal lives value
-    public int lives
-    {
-        get { return _lives; }
-        set
-        {
-            if (value >= maxLives)
-            {
-                _lives = maxLives;
-            }
-            else if (value < 0)
-            {
-                _lives = 0;
-                //go to game over
-                Debug.Log("Game Over");
-            }
-            else if (_lives > value)
-            {
-                _lives = value;
-                //respawn goes here
-                Debug.Log("Respawn");
-            }
-            else
-            {
-                _lives = value;
-            }
-
-            Debug.Log($"Lives were changed to {_lives}");
-        }
-    } //finalized life gating
-
-    private int _score = 3;
-    public int score
-    {
-        get => _score;
-        set
-        {
-            _score = value;
-        }
-
-    }
+   
 
     #endregion
 

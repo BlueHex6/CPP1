@@ -5,9 +5,9 @@ public class cameraFollow : MonoBehaviour
 {
     public enum CameraState
     {
-        None, 
-        Follow, 
-        Bound, 
+        None,
+        Follow,
+        Bound,
         Transition
     }
 
@@ -18,18 +18,10 @@ public class cameraFollow : MonoBehaviour
     public float cameraSpeed = 5;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Awake()
     {
-        if (target == null)
-        {
-            GameObject player = GameObject.FindGameObjectWithTag("Player");
-            if (player == null)
-            {
-                Debug.LogError("No Target assigned as player. Please include valid reference in the camera follow script");
-                return;
-            }
-            target = player.transform;
-        } 
+        GameManager.Instance.OnPlayerSpawned += (pc) => target = pc.transform;
+        GameManager.Instance.OnPlayerRespawned += (pc) => transform.position = new Vector3(pc.transform.position.x, pc.transform.position.y, transform.position.z);
     }
 
     //regular update function is specifically linked to the computers tick rate - useful for input handling / rendering
@@ -42,17 +34,29 @@ public class cameraFollow : MonoBehaviour
     {
         if (target == null) //this is an exit condition if object need to be run doesn't exist.
         {
+            //TryGetPlayerInstance();
             return;
         }
-        
+
         //we need to capture current position in order to modify the x position for this update
         Vector3 currentPos = transform.position;
         //modify to a clamp of x min and max values... if you wanted more functionality - here is where you would modify the camera positions
-        currentPos.x = Mathf.Clamp(target.position.x , minXPos , maxXPos) ;
+        currentPos.x = Mathf.Clamp(target.position.x, minXPos, maxXPos);
 
         //currentPos.y = Mathf.Clamp
         transform.position = Vector3.MoveTowards(transform.position, currentPos, cameraSpeed * Time.deltaTime);
 
-        
+
     }
+
+    //void TryGetPlayerInstance()
+    //{
+    //    PlayerController player = GameManager.Instance.PlayerInstance;
+    //    if (player == null)
+    //    {
+    //        Debug.LogError("No Target assigned as player. Please include valid reference in the camera follow script");
+    //        return;
+    //    }
+    //    target = player.transform;
+    //}
 }
